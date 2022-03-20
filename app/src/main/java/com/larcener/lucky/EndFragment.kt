@@ -25,7 +25,11 @@ class EndFragment : Fragment() {
         val x = args?.get("res")
         button = inflate.findViewById(R.id.rstrt)
         text = inflate.findViewById(R.id.resuu)
-        text.text = x.toString()
+        if(x==0){
+            text.text = "You Lose"
+        }else{
+            text.text = "You Won\n"+x.toString()
+        }
         button.setOnClickListener {
             fragmentTransaction.replace(R.id.frag_view, GameFragment())
             fragmentTransaction.commit()

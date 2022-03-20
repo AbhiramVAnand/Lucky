@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:text="You Won"
-            android:textSize="86sp"
+            android:textAlignment="center"
+            android:textSize="64sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
