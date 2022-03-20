@@ -1,2 +1,2 @@
 # Lucky
-<h1>Lucky - is a simple andriod game</h1>
+<h3>Lucky - is a simple andriod game</h3>
