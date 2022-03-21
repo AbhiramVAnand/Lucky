@@ -1,4 +1,3 @@
-
 package com.larcener.lucky
 
 import android.os.Bundle
@@ -8,27 +7,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import kotlin.concurrent.timer
 
-class LuckyFragment : Fragment() {
-    lateinit var button : Button
+class SplashFragment : Fragment() {
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val inflate = inflater.inflate(R.layout.fragment_lucky, container, false)
+        val inflate = inflater.inflate(R.layout.fragment_splash, container, false)
         val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
-        button = inflate.findViewById(R.id.start)
-        var buttonI : ImageView = inflate.findViewById(R.id.infoi)
+        var buttonI : ImageView = inflate.findViewById(R.id.backI)
         buttonI.setOnClickListener{
-            fragmentTransaction.replace(R.id.frag_view,SplashFragment())
-            fragmentTransaction.commit()
-        }
-        button.setOnClickListener {
-            fragmentTransaction.replace(R.id.frag_view,GameFragment())
+            fragmentTransaction.replace(R.id.frag_view,LuckyFragment())
             fragmentTransaction.commit()
         }
         return inflate
     }
+
 }
