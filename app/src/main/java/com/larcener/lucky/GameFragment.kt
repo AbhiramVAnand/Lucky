@@ -1,17 +1,13 @@
 package com.larcener.lucky
 
 import android.os.Bundle
-import android.os.TokenWatcher
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import androidx.core.view.OneShotPreDrawListener
 import java.lang.Exception
-import java.util.concurrent.ThreadPoolExecutor
 
 class GameFragment : Fragment() {
     lateinit var button : Button
@@ -79,7 +75,7 @@ class GameFragment : Fragment() {
             x = game(a,b,c,sum)
             val bundle = Bundle()
             bundle.putInt("res",x)
-            val frag = EndFragment()
+            val frag = ResultFragment()
             frag.arguments = bundle
             val fragmentManager = parentFragmentManager
             val fragmentTransaction = fragmentManager.beginTransaction()

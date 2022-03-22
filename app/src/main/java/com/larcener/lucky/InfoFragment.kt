@@ -5,11 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
-import kotlin.concurrent.timer
 
-class SplashFragment : Fragment() {
+class InfoFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -17,12 +15,12 @@ class SplashFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val inflate = inflater.inflate(R.layout.fragment_splash, container, false)
+        val inflate = inflater.inflate(R.layout.fragment_info, container, false)
         val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         var buttonI : ImageView = inflate.findViewById(R.id.backI)
         buttonI.setOnClickListener{
-            fragmentTransaction.replace(R.id.frag_view,LuckyFragment())
+            fragmentTransaction.replace(R.id.frag_view,StartFragment())
             fragmentTransaction.commit()
         }
         return inflate

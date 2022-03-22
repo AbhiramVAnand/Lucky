@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
 
-        fragmentTransaction.replace(R.id.frag_view, LuckyFragment())
+        fragmentTransaction.replace(R.id.frag_view, StartFragment())
         fragmentTransaction.commit()
     }
 }

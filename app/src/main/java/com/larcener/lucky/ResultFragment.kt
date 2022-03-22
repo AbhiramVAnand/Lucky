@@ -9,7 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 
 
-class EndFragment : Fragment() {
+class ResultFragment : Fragment() {
     lateinit var text : TextView
     lateinit var button : Button
 
@@ -18,7 +18,7 @@ class EndFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var inflate = inflater.inflate(R.layout.fragment_end, container, false)
+        var inflate = inflater.inflate(R.layout.fragment_result, container, false)
         val fragmentManager = parentFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         val args = this.arguments
